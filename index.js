@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs');
 
@@ -48,6 +48,6 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Node web server listening at ${PORT}!`);
+app.listen(port, () => {
+    console.log(`Node web server listening at ${port}!`);
 });
