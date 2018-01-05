@@ -48,6 +48,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects', {
+        pageTitle: 'Projects'
+    });
+});
+
 app.listen(port, () => {
     console.log(`Node web server listening at ${port}!`);
 });
